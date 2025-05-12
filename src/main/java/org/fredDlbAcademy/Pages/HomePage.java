@@ -23,8 +23,11 @@ public class HomePage {
     }
 
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.android.permissioncontroller:id/permission_allow_button\")")
-    @iOSXCUITFindBy(accessibility = "//TODO")  // Remplacer par l'identifiant correct pour iOS
     private WebElement acceptNotificationsBtn;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.android.permissioncontroller:id/permission_deny_button\")")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeButton[`name == \"Rechercher sur YouTube\"`]")
+    private WebElement searchField;
 
     public void clickAcceptNotifications() {
         try {
@@ -39,5 +42,9 @@ public class HomePage {
         } catch (NoSuchElementException e) {
             System.out.println("Accept Notifications button not found: " + e.getMessage());
         }
+    }
+
+    public void clickSearchField() {
+        searchField.click();
     }
 }

@@ -12,5 +12,6 @@ public class TC001_Youtube extends BaseTest {
     public void TC001() throws IOException {
         HomePage homePage = new HomePage(getDriver(), getDeviceName());
         homePage.clickAcceptNotifications();
+        homePage.clickSearchField();
     }
 }
