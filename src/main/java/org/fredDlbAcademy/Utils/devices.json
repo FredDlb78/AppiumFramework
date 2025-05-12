@@ -1,0 +1,44 @@
+{
+  "iPhoneFred": {
+    "platform": "iOS",
+    "platformVersion": "18.4.1",
+    "deviceName": "iPhone 16 Pro Max",
+    "udid": "00008140-001C65103AD2801C",
+    "bundleId": "com.google.ios.youtube",
+    "xcodeOrgId": "",
+    "xcodeSigningId": "iPhone Developer",
+    "automationName": "XCUITest"
+  },
+  "iPhoneSimulatorFred": {
+    "platform": "iOS",
+    "platformVersion": "18.2",
+    "deviceName": "iPhone 16 Pro",
+    "udid": "CF386E41-1F0F-47B3-AEF3-810710F0EAEA",
+    "bundleId": "com.google.ios.youtube",
+    "xcodeOrgId": "",
+    "xcodeSigningId": "iPhone Developer",
+    "automationName": "XCUITest"
+  },
+  "AndroidSimulatorFred": {
+    "platform": "Android",
+    "platformVersion": "12.0",
+    "deviceName": "FredTestEmulator",
+    "udid": "emulator-5554",
+    "app": "/Users/freddelabre/Automation Projects/Appium_Project/src/test/java/resources/ApiDemos-debug.apk",
+    "automationName": "UiAutomator2",
+    "chromedriverExecutable": "/Users/freddelabre/chromedriver 2 android",
+    "appPackage": "com.google.android.youtube",
+    "appActivity": "com.google.android.apps.youtube.app.WatchWhileActivity"
+  },
+  "S21UltraFred": {
+    "platform": "Android",
+    "platformVersion": "13",
+    "deviceName": "Samsung Galaxy S21 Ultra",
+    "udid": "R5CR202DEEZ",
+    "app": "/Users/freddelabre/Automation Projects/Appium_Project/src/test/java/resources/ApiDemos-debug.apk",
+    "automationName": "UiAutomator2",
+    "chromedriverExecutable": "/Users/freddelabre/chromedriver 2 android",
+    "appPackage": "com.google.android.youtube",
+    "appActivity": "com.google.android.apps.youtube.app.WatchWhileActivity"
+  }
+}
