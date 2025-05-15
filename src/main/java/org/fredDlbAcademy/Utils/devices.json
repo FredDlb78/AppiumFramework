@@ -40,5 +40,16 @@
     "chromedriverExecutable": "/Users/freddelabre/chromedriver 2 android",
     "appPackage": "com.google.android.youtube",
     "appActivity": "com.google.android.apps.youtube.app.WatchWhileActivity"
+  },
+  "S23James": {
+    "platform": "Android",
+    "platformVersion": "14",
+    "deviceName": "Galaxy S23",
+    "udid": "R3CW502139Y",
+    "app": "/Users/freddelabre/Automation Projects/Appium_Project/src/test/java/resources/ApiDemos-debug.apk",
+    "automationName": "UiAutomator2",
+    "chromedriverExecutable": "C:/ChromeDriver/chromedriver.exe",
+    "appPackage": "com.google.android.youtube",
+    "appActivity": "com.google.android.apps.youtube.app.WatchWhileActivity"
   }
 }

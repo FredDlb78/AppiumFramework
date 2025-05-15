@@ -21,16 +21,22 @@ import java.net.URISyntaxException;
 import java.time.Duration;
 
 public class BaseTest {
-    // Déclaration d'un AppiumDriver générique pour gérer à la fois Android et iOS
     protected AppiumDriver driver;
-    protected String deviceName = "iPhoneFred";  // deviceName centralisé
+    protected String deviceName = "S23James";  // deviceName centralisé
     private AppiumDriverLocalService service;
 
     @BeforeClass
     public void ConfigureAppium() throws MalformedURLException, URISyntaxException, IOException {
+        // Obtenir le chemin vers Appium via la variable d’environnement
+        String appiumJSPath = System.getenv("APPIUM_HOME");
+        if (appiumJSPath == null || appiumJSPath.isEmpty()) {
+            throw new RuntimeException("La variable d’environnement APPIUM_HOME n’est pas définie. Définis-la avec le chemin vers main.js");
+        }
+
         // Démarrage du service Appium
         service = new AppiumServiceBuilder()
-                .withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
+                .withAppiumJS(new File(appiumJSPath))
+                // .withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js")) // ligne pour ton pote sur Mac
                 .withIPAddress("127.0.0.1")
                 .usingPort(4723)
                 .build();
@@ -66,18 +72,15 @@ public class BaseTest {
         if (driver != null) {
             driver.quit();
         }
-        // Arrêter le service Appium
         if (service != null) {
             service.stop();
         }
     }
 
-    // Getter pour récupérer le driver
     public AppiumDriver getDriver() {
         return driver;
     }
 
-    // Getter pour récupérer le deviceName
     public String getDeviceName() {
         return deviceName;
     }
